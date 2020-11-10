@@ -1,0 +1,415 @@
+<style>
+    .tox-statusbar__branding {
+        display: none !important;
+    }
+
+    .tox.tox-tinymce {
+        height: 400px !important;
+    }
+
+    .tox-notifications-container {
+        display: none !important;
+    }
+</style>
+
+
+<div class="container-fluid pb-5 mb-5" style="height: 100vh;" id="details">
+
+    <div class="row align-items-center">
+        <h1>Ethics Committee</h1>
+
+        <button onclick="back()" class="btn btn-secondary mr-0">Back</button>
+
+    </div>
+
+    <div class="card bg-dark text-white">
+        <img src="#" class="card-img" alt="..." width="100%" height="500px">
+        <div class="card-img-overlay mt-auto" style="top: auto;">
+            <div class="card" style="width: 200px !important;height: 200px;">
+                <img src="#" alt="" class="card-img border d-inline" height="100%">
+            </div>
+        </div>
+    </div>
+
+    <nav class="container-fluid pt-3">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-about-tab" data-toggle="tab" href="#about" role="tab"
+                aria-controls="about" aria-selected="true">About</a>
+            <a class="nav-item nav-link" id="nav-service-tab" data-toggle="tab" href="#service" role="tab"
+                aria-controls="service" aria-selected="false">Service</a>
+            <a class="nav-item nav-link" id="nav-team-tab" data-toggle="tab" href="#team" role="tab"
+                aria-controls="team" aria-selected="false">Team Members</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#profile" role="tab"
+                aria-controls="profile" aria-selected="false">My Profile</a>
+        </div>
+    </nav>
+
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="nav-about-tab">
+            <div class="container-fluid pt-2 mt-4">
+                <form>
+                    <h2>Organization</h2>
+
+                    <div class="pt-3">
+                        <div class="form-group row">
+                            <label class="h4 col-2" for="orgName">Name</label>
+                            <input type="text" name="orgName" id="orgName" class="form-control col-10"
+                                placeholder="Name of Your Organization" aria-describedby="helpId">
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="h4 col-2" for="orgMail">Email</label>
+                            <input type="email" name="orgMail" id="orgMail" class="form-control col-10"
+                                placeholder="Mail ID of Your Organization" aria-describedby="helpId">
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="h4 col-2"> About </label>
+                            <textarea class="col-10" id="editor" style="width: 83.33333%;"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="service" role="tabpanel" aria-labelledby="nav-service-tab">
+            <div class="container-fluid pt-2 mt-4">
+
+                <div class="row py-2 m-0">
+                    <h2 class="d-inline">Services</h2>
+                    <button type="button" class="btn btn-primary btn-sm d-inline ml-auto" data-toggle="modal"
+                        data-target="#modalId" onclick="optionSelect()">
+                        + New Service
+                    </button>
+                </div>
+
+                <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Add New Services</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="service">Service Name</label>
+                                        <select class="form-control service" name="service" id="service"
+                                            data-live-search="true" title="Select New Services">
+                                            <option>Bioequivalence Studies (CRO)</option>
+                                            <option>Phase I (CRO)</option>
+                                            <option>Phase IIa (CRO) </option>
+                                            <option>Phase II-III (CRO)</option>
+                                            <option>Phase IIIb-IV (CRO) </option>
+                                            <optgroup label="Bioequivalence Studies (CRO)">
+                                                <option>Early Product Development </option>
+                                                <option>Phase IIa, Proof of Concept</option>
+                                            </optgroup>
+
+                                        </select>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="service-desc">About The Service</label>
+                                        <textarea id="service-desc form-control" rows="10"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services">
+
+                    <div class="card border-0 bg-light service my-2">
+                        <div class="card-body">
+                            <h4>Service Name</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus unde, deserunt
+                                illo,
+                                omnis
+                                quibusdam ut debitis magni nobis voluptatem incidunt dolore voluptatibus
+                                architecto
+                                deleniti
+                                consequatur voluptates sequi? Illum, consequuntur quibusdam! <span class="collapse"
+                                    id="collapseExample1">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad
+                                    squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                                    nesciunt
+                                    sapiente
+                                    ea proident.
+                                </span>
+                            </p>
+
+                            <button class="btn" data-toggle="collapse" href="#collapseExample1" role="button"
+                                aria-expanded="false" aria-controls="collapseExample1">
+                                See More
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 bg-light service pt-2">
+                        <div class="card-body">
+
+                            <h4>Service Name</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus unde, deserunt
+                                illo,
+                                omnis
+                                quibusdam ut debitis magni nobis voluptatem incidunt dolore voluptatibus
+                                architecto
+                                deleniti
+                                consequatur voluptates sequi? Illum, consequuntur quibusdam! <span class="collapse"
+                                    id="collapseExample2">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad
+                                    squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                                    nesciunt
+                                    sapiente
+                                    ea proident.
+                                </span>
+                            </p>
+
+                            <button class="btn" data-toggle="collapse" href="#collapseExample2" role="button"
+                                aria-expanded="false" aria-controls="collapseExample2">
+                                See More
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="tab-pane fade" id="team" role="tabpanel" aria-labelledby="nav-team-tab">
+            <div class="container-fluid pt-2 mt-4">
+
+                <h4>Members</h4>
+
+                <div class="members row flex-wrap py-2 m-0 justify-content-center" style="gap: 1.5rem;">
+
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <form>
+                                        <div class="row">
+
+                                            <div class="form-group col-6">
+                                                <label for="newFirstName">First Name</label>
+                                                <input type="text" name="newFirstName" id="newFirstName"
+                                                    class="form-control" placeholder="First Name"
+                                                    aria-describedby="helpId">
+                                                <small id="helpId" class="text-muted"></small>
+                                            </div>
+
+                                            <div class="form-group col-6">
+                                                <label for="newLastName">Last Name</label>
+                                                <input type="text" name="newLastName" id="newLastName"
+                                                    class="form-control" placeholder="Last Name"
+                                                    aria-describedby="helpId">
+                                                <small id="helpId" class="text-muted"></small>
+                                            </div>
+
+                                            <div class="form-group col-6">
+                                                <label for="newMail">Email</label>
+                                                <input type="email" name="newMail" id="newMail" class="form-control"
+                                                    placeholder="example@email.com" aria-describedby="helpId">
+                                                <small id="helpId" class="text-muted"></small>
+                                            </div>
+
+                                            <div class="form-group col-6">
+                                                <label for="role">User Role</label>
+                                                <select class="form-control" name="role" id="role">
+                                                    <option disabled selected> Select User Role</option>
+                                                    <optgroup label="Ethics Committee">
+                                                        <option>EC Admin</option>
+                                                        <option>EC Member Secretary</option>
+                                                        <option>EC Chair Person</option>
+                                                        <option>EC Coordinator</option>
+                                                        <option>EC Member</option>
+                                                    </optgroup>
+                                                    <optgroup label="sponsor">
+                                                        <option>Sponsor Admin</option>
+                                                        <option>Sponsor Director</option>
+                                                        <option>Sponsor CRA</option>
+                                                    </optgroup>
+                                                    <optgroup label="CRO">
+                                                        <option>CRO Admin </option>
+                                                        <option>CRO Director </option>
+                                                        <option>CRO CRA </option>
+                                                    </optgroup>
+                                                    <optgroup label="Research Site">
+                                                        <option> Site Admin </option>
+                                                        <option> Site Manager </option>
+                                                        <option> Principal Investigator </option>
+                                                        <option> Study Coordinator </option>
+                                                        <option> Sub Investigator </option>
+                                                    </optgroup>
+                                                    <optgroup label="Vendor">
+                                                        <option>Admin</option>
+                                                    </optgroup>
+
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member card px-4 col-3">
+                        <div class="card-body text-center">
+                            <div class="rounded-circle bg-dark text-light mx-auto mb-2"
+                                style="width: 50px; height: 50px; line-height: 50px;"> + </div>
+                            <h5 class="mb-0">Add New Members</h5>
+                            <a href="#" class="h6 stretched-link" data-toggle="modal" data-target="#modelId"></a>
+                        </div>
+                    </div>
+
+
+                    <div class="member card px-4 col-3">
+                        <div class="card-body text-center">
+                            <div class="rounded-circle bg-primary text-light mx-auto mb-2"
+                                style="width: 50px; height: 50px; line-height: 50px;"> A </div>
+                            <h5 class="mb-0">Jason Todd</h5>
+                            <p class="mb-0">Director</p>
+                        </div>
+                    </div>
+
+                    <div class="member card px-4 col-3">
+                        <div class="card-body text-center">
+                            <div class="rounded-circle bg-info text-light mx-auto mb-2"
+                                style="width: 50px; height: 50px; line-height: 50px;"> A </div>
+                            <h5 class="mb-0">Jason Todd</h5>
+                            <p class="mb-0">Director</p>
+                        </div>
+                    </div>
+
+                    <div class="member card px-4 col-3">
+                        <div class="card-body text-center">
+                            <div class="rounded-circle bg-warning text-light mx-auto mb-2"
+                                style="width: 50px; height: 50px; line-height: 50px;"> A </div>
+                            <h5 class="mb-0">Jason Todd</h5>
+                            <p class="mb-0">Director</p>
+                        </div>
+                    </div>
+
+                    <div class="member card px-4 col-3">
+                        <div class="card-body text-center">
+                            <div class="rounded-circle bg-danger text-light mx-auto mb-2"
+                                style="width: 50px; height: 50px; line-height: 50px;"> A </div>
+                            <h5 class="mb-0">Jason Todd</h5>
+                            <p class="mb-0">Director</p>
+                        </div>
+                    </div>
+
+                    <div class="member card px-4 col-3">
+                        <div class="card-body text-center">
+                            <div class="rounded-circle bg-success text-light mx-auto mb-2"
+                                style="width: 50px; height: 50px; line-height: 50px;"> A </div>
+                            <h5 class="mb-0">Jason Todd</h5>
+                            <p class="mb-0">Director</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="nav-profile">
+            <div class="container-fluid pt-2 mt-4">
+
+                <h4>Profile</h4>
+
+                <form>
+
+                    <div class="row flex-wrap">
+
+                        <div class="form-group col-6">
+                            <label for="newFirstName">First Name</label>
+                            <input type="text" name="newFirstName" id="newFirstName" class="form-control"
+                                placeholder="First Name" aria-describedby="helpId">
+                            <small id="helpId" class="text-muted"></small>
+                        </div>
+
+                        <div class="form-group col-6">
+                            <label for="newLastName">Last Name</label>
+                            <input type="text" name="newLastName" id="newLastName" class="form-control"
+                                placeholder="Last Name" aria-describedby="helpId">
+                            <small id="helpId" class="text-muted"></small>
+                        </div>
+
+                        <div class="form-group col-6">
+                            <label for="newMail">Email Address</label>
+                            <input type="email" name="newMail" id="newMail" class="form-control"
+                                placeholder="example@email.com" aria-describedby="helpId">
+                            <small id="helpId" class="text-muted"></small>
+                        </div>
+
+                        <div class="form-group col-6">
+                            <label for="newPhoneNo">Phone No</label>
+                            <input type="tel" name="newPhoneNo" id="newPhoneNo" class="form-control"
+                                placeholder="+91 987 987 9870" aria-describedby="helpId">
+                            <small id="helpId" class="text-muted"></small>
+                        </div>
+
+
+                        <div class="form-group col-6">
+                            <label for="role">Employee Role</label>
+                            <input type="text" name="role" id="role" class="form-control" placeholder="Admin"
+                                aria-describedby="helpId" readonly>
+                            <small id="helpId" class="text-muted"></small>
+                        </div>
+
+                        <!-- <span class="col-6"> </span> -->
+
+                        <div class="form-group col-6">
+                            <label for="newProfilePicture">Profile Picture</label>
+                            <input type="file" class="form-control-file file" name="newProfilePicture"
+                                id="newProfilePicture" data-show-preview="false" aria-describedby="fileHelpId">
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+    tinymce.init({
+        selector: 'textarea#editor',
+        // menubar: false,
+        // toolbar_mode: 'floating',
+        // plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+    });
+</script>
